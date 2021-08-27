@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson Repository &#8212; Teaching Text Analysis</title>
+    <title>Lesson Directory &#8212; Teaching Text Analysis</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Creating your own Jupyter Book Website for Teaching" href="create-your-own.html" />
+    <link rel="next" title="Add my lesson to the directory" href="add-my-lesson.html" />
     <link rel="prev" title="Course Syllabus Template" href="syllabus.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -94,7 +94,7 @@
   The Course
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="schedule.html">
    Course Schedule
@@ -105,41 +105,26 @@
    Course Syllabus
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   All Teaching Notebooks
-  </a>
- </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Create your own Teaching Website
+  Open Educational Directory
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="create-your-own.html">
-   Create your own Jupyter Book
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Open Notebook Lessons Directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="install-software.html">
-   Installing software to modify your Book
+  <a class="reference internal" href="add-my-lesson.html">
+   Add your lesson or class
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="configure-git.html">
-   Clone your repository to your local machine
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="making-site-changes.html">
-   Make local changes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pushing-to-git.html">
-   Push changes to the web
+  <a class="reference external" href="https://constellate.org/docs/how-to-create-a-course-website">
+   Create Course from this template
   </a>
  </li>
 </ul>
@@ -155,12 +140,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://docs.constellate.org/">
+  <a class="reference external" href="https://constellate.org/docs">
    Constellate Documentation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://docs.constellate.org/key-terms/">
+  <a class="reference external" href="https://constellate.org/docs/key-terms">
    Text Analysis Glossary
   </a>
  </li>
@@ -261,7 +246,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python">
@@ -279,8 +264,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#research-notebooks">
-     Research Notebooks
+    <a class="reference internal nav-link" href="#advanced-research-notebooks">
+     Advanced Research Notebooks
     </a>
    </li>
   </ul>
@@ -301,48 +286,58 @@
         
               <div>
                 
-  <div class="section" id="lesson-repository">
-<h1>Lesson Repository<a class="headerlink" href="#lesson-repository" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lesson-directory">
+<h1>Lesson Directory<a class="headerlink" href="#lesson-directory" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="beginner-lessons">
 <h3>Beginner Lessons<a class="headerlink" href="#beginner-lessons" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="../getting-started-with-jupyter.html"><span class="doc std std-doc">Getting Started with Jupyter Notebooks</span></a></p></li>
-<li><p><a class="reference internal" href="../python-basics-1.html"><span class="doc std std-doc">Python Basics 1</span></a></p></li>
-<li><p><a class="reference internal" href="../python-basics-2.html"><span class="doc std std-doc">Python Basics 2</span></a></p></li>
-<li><p><a class="reference internal" href="../python-basics-3.html"><span class="doc std std-doc">Python Basics 3</span></a></p></li>
+<li><p><a class="reference internal" href="../getting-started-with-jupyter.html"><span class="doc std std-doc">Getting Started with Jupyter Notebooks</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../python-basics-1.html"><span class="doc std std-doc">Python Basics 1</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../python-basics-2.html"><span class="doc std std-doc">Python Basics 2</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../python-basics-3.html"><span class="doc std std-doc">Python Basics 3</span></a> by Nathan Kelber</p></li>
 </ul>
 </div>
 <div class="section" id="intermediate-lessons">
 <h3>Intermediate Lessons<a class="headerlink" href="#intermediate-lessons" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="../exploring-metadata.html"><span class="doc std std-doc">Exploring Metadata and Pre-Processing</span></a></p></li>
-<li><p><a class="reference internal" href="../exploring-word-frequencies.html"><span class="doc std std-doc">Exploring Word Frequencies</span></a></p></li>
-<li><p><a class="reference internal" href="../finding-significant-terms.html"><span class="doc std std-doc">Finding Significant Words using TF/IDF</span></a></p></li>
-<li><p><a class="reference internal" href="../working-with-dataset-files.html"><span class="doc std std-doc">Working with Dataset Files</span></a></p></li>
-<li><p><a class="reference internal" href="../pandas-1.html"><span class="doc std std-doc">Pandas 1</span></a></p></li>
-<li><p><a class="reference internal" href="../creating-stopwords-list.html"><span class="doc std std-doc">Creating a Stopwords List</span></a></p></li>
-<li><p><a class="reference internal" href="../creating-stopwords-list.html"><span class="doc std std-doc">Counter Objects</span></a></p></li>
-<li><p><a class="reference internal" href="../sentiment-analysis-with-vader.html"><span class="doc std std-doc">Sentiment Analysis with VADER</span></a></p></li>
+<li><p><a class="reference internal" href="../exploring-metadata.html"><span class="doc std std-doc">Exploring Metadata and Pre-Processing</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../exploring-word-frequencies.html"><span class="doc std std-doc">Exploring Word Frequencies</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../finding-significant-terms.html"><span class="doc std std-doc">Finding Significant Words using TF/IDF</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../working-with-dataset-files.html"><span class="doc std std-doc">Working with Dataset Files</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../pandas-1.html"><span class="doc std std-doc">Pandas 1</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/pandas.html">Data Analysis with Pandas</a> by Melanie Walsh</p></li>
+<li><p><a class="reference internal" href="../creating-stopwords-list.html"><span class="doc std std-doc">Creating a Stopwords List</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../counter-objects.html"><span class="doc std std-doc">Counter Objects</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../sentiment-analysis-with-vader.html"><span class="doc std std-doc">Sentiment Analysis with VADER</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/ocr.html">A Gentle Introduction to OCR</a> by Hannah Jacobs</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/ancient-medieval.html">Intro to Machine Learning</a> by William Mattingly</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/machine-learning-grant.html">Intro to Machine Learning</a> by Grant Glass</p></li>
 </ul>
 </div>
-<div class="section" id="research-notebooks">
-<h3>Research Notebooks<a class="headerlink" href="#research-notebooks" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="advanced-research-notebooks">
+<h3>Advanced Research Notebooks<a class="headerlink" href="#advanced-research-notebooks" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="../topic-modeling.html"><span class="doc std std-doc">LDA Topic Modeling</span></a></p></li>
-<li><p><a class="reference internal" href="../tokenizing-text-files.html"><span class="doc std std-doc">Tokenize Text Files</span></a></p></li>
-<li><p><a class="reference internal" href="../tokenize-text-files-with-nltk-for-research.html"><span class="doc std std-doc">Tokenizing Text Files with NLTK</span></a></p></li>
-<li><p><a class="reference internal" href="../exploring-metadata-for-research.html"><span class="doc std std-doc">Exploring Metadata and Pre-Processing (Research Version)</span></a></p></li>
-<li><p><a class="reference internal" href="../exploring-word-frequencies-for-research.html"><span class="doc std std-doc">Exploring Word Frequencies (Research Version)</span></a></p></li>
-<li><p><a class="reference internal" href="../finding-significant-terms-for-research.html"><span class="doc std std-doc">Finding Significant Words using TF/IDF (Research Version)</span></a></p></li>
-<li><p><a class="reference internal" href="../creating-stopwords-list-for-research.html"><span class="doc std std-doc">Creating a Stopwords List (Research Version)</span></a></p></li>
+<li><p><a class="reference internal" href="../topic-modeling.html"><span class="doc std std-doc">LDA Topic Modeling</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/topic-models.html">How to Do Things with Topic Models</a> by Rafael Alvarado</p></li>
+<li><p><a class="reference internal" href="../tokenizing-text-files.html"><span class="doc std std-doc">Tokenize Text Files</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../tokenize-text-files-with-nltk-for-research.html"><span class="doc std std-doc">Tokenizing Text Files with NLTK</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../exploring-metadata-for-research.html"><span class="doc std std-doc">Exploring Metadata and Pre-Processing (Research Version)</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../exploring-word-frequencies-for-research.html"><span class="doc std std-doc">Exploring Word Frequencies (Research Version)</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../finding-significant-terms-for-research.html"><span class="doc std std-doc">Finding Significant Words using TF/IDF (Research Version)</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../creating-stopwords-list-for-research.html"><span class="doc std std-doc">Creating a Stopwords List (Research Version)</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/ancient-medieval.html">Text Analysis in Ancient/Medieval Languages</a> by William Mattingly</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/ner.html">Named Entity Recognition</a> by Zoe LeBlanc</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/visualizing-humanities-data.html">Visualizing Humanities Data</a> by Zoe LeBlanc</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="r">
 <h2>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h2>
-<p>First lessons coming summer 2021. For those curious, here’s <a class="reference external" href="https://binder.tdm-pilot.org/v2/gh/mdlincoln/bindertest/tidytext?urlpath=rstudio">an example</a> of RStudio running in our environment that was <a class="reference external" href="https://github.com/mdlincoln/bindertest">created by Matt Lincoln and David Brown</a> for a 2019 Text Mining Workshop at Carnegie Mellon University.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/intro-to-r.html">Introduction to R Programming</a> by Jacalyn Hubandtest/tidytext?urlpath=rstudio) of RStudio running in our environment that was <a class="reference external" href="https://github.com/mdlincoln/bindertest">created by Matt Lincoln and David Brown</a> for a 2019 Text Mining Workshop at Carnegie Mellon University.</p></li>
+</ul>
 </div>
 </div>
 
@@ -369,12 +364,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="syllabus.html" title="previous page">Course Syllabus Template</a>
-    <a class='right-next' id="next-link" href="create-your-own.html" title="next page">Creating your own Jupyter Book Website for Teaching</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="syllabus.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Course Syllabus Template</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="add-my-lesson.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Add my lesson to the directory</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

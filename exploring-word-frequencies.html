@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -78,7 +78,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -103,41 +103,26 @@
    Course Syllabus
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/all-notebooks.html">
-   All Teaching Notebooks
-  </a>
- </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Create your own Teaching Website
+  Open Educational Directory
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="book/create-your-own.html">
-   Create your own Jupyter Book
+  <a class="reference internal" href="book/all-notebooks.html">
+   Open Notebook Lessons Directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="book/install-software.html">
-   Installing software to modify your Book
+  <a class="reference internal" href="book/add-my-lesson.html">
+   Add your lesson or class
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="book/configure-git.html">
-   Clone your repository to your local machine
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/making-site-changes.html">
-   Make local changes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/pushing-to-git.html">
-   Push changes to the web
+  <a class="reference external" href="https://constellate.org/docs/how-to-create-a-course-website">
+   Create Course from this template
   </a>
  </li>
 </ul>
@@ -153,12 +138,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://docs.constellate.org/">
+  <a class="reference external" href="https://constellate.org/docs">
    Constellate Documentation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://docs.constellate.org/key-terms/">
+  <a class="reference external" href="https://constellate.org/docs/key-terms">
    Text Analysis Glossary
   </a>
  </li>
@@ -276,7 +261,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-your-dataset">
@@ -316,6 +301,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modify-stopwords-list">
+     Modify Stopwords List
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gather-unigrams-again-with-extra-cleaning-steps">
      Gather unigrams again with extra cleaning steps
     </a>
@@ -325,6 +315,16 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#display-results">
    Display Results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#export-results-to-a-csv-file">
+   Export Results to a CSV File
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-word-cloud-to-visualize-the-data">
+   Create a Word Cloud to Visualize the Data
   </a>
  </li>
 </ul>
@@ -407,12 +407,16 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importing your dataset with a dataset ID</span>
 <span class="kn">import</span> <span class="nn">tdm_client</span>
-<span class="c1"># Pull in the dataset that matches `dataset_id`</span>
+<span class="c1"># Pull in the sampled dataset that matches `dataset_id`</span>
 <span class="c1"># in the form of a gzipped JSON lines file.</span>
 <span class="c1"># The .get_dataset() method downloads the gzipped JSONL file</span>
 <span class="c1"># to the /data folder and returns a string for the file name and location</span>
 <span class="c1"># dataset_metadata will be a string containing that file name and location</span>
 <span class="n">dataset_file</span> <span class="o">=</span> <span class="n">tdm_client</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">)</span>
+
+<span class="c1"># Pull in the full dataset that matches `dataset_id`</span>
+<span class="c1"># The full dataset must be requested first!</span>
+<span class="c1">#dataset_file = tdm_client.download(dataset_id, &#39;jsonl&#39;)</span>
 </pre></div>
 </div>
 </div>
@@ -548,6 +552,36 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preview stop words</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">stop_words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modify-stopwords-list">
+<h3>Modify Stopwords List<a class="headerlink" href="#modify-stopwords-list" title="Permalink to this headline">¶</a></h3>
+<p>The following code examples can be used to modify a stopwords list. We recommend storing your stopwords in a CSV file as shown in the <a class="reference internal" href="creating-stopwords-list.html"><span class="doc std std-doc">Creating Stopwords List</span></a> notebook.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>code</p></th>
+<th class="head"><p>change</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>`stop_words.append(‘word_to_add’)</p></td>
+<td><p>Append a single word to the list</p></td>
+</tr>
+<tr class="row-odd"><td><p>stop_words = stop_words + [‘word_one’, ‘word_two’, ‘word_three’]</p></td>
+<td><p>Concatenate multiple words to the list</p></td>
+</tr>
+<tr class="row-even"><td><p>stop_words.remove(‘word_to_remove’)</p></td>
+<td><p>Delete a word from the list</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="gather-unigrams-again-with-extra-cleaning-steps">
 <h3>Gather unigrams again with extra cleaning steps<a class="headerlink" href="#gather-unigrams-again-with-extra-cleaning-steps" title="Permalink to this headline">¶</a></h3>
@@ -592,6 +626,73 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
 </div>
 </div>
 </div>
+<div class="section" id="export-results-to-a-csv-file">
+<h2>Export Results to a CSV File<a class="headerlink" href="#export-results-to-a-csv-file" title="Permalink to this headline">¶</a></h2>
+<p>The word frequency data can be exported to a CSV file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add output method to csv</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./data/word_frequencies_</span><span class="si">{</span><span class="n">dataset_id</span><span class="si">}</span><span class="s1">.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;unigram&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">gram</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">word_frequency</span><span class="o">.</span><span class="n">most_common</span><span class="p">():</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">gram</span><span class="p">,</span> <span class="n">count</span><span class="p">])</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-word-cloud-to-visualize-the-data">
+<h2>Create a Word Cloud to Visualize the Data<a class="headerlink" href="#create-a-word-cloud-to-visualize-the-data" title="Permalink to this headline">¶</a></h2>
+<p>A visualization using the WordCloud library in Python. To learn more about customizing a wordcloud, <a class="reference external" href="http://amueller.github.io/word_cloud/generated/wordcloud.WordCloud.html">see the documentation</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add wordcloud</span>
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a wordcloud from our data</span>
+
+<span class="c1"># Adding a mask shape of a cloud to your word cloud</span>
+<span class="c1"># By default, the shape will be a rectangle</span>
+<span class="c1"># You can specify any shape you like based on an image file</span>
+<span class="n">cloud_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./data/sample_cloud.png&#39;</span><span class="p">))</span> <span class="c1"># Specifies the location of the mask shape</span>
+<span class="n">cloud_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">cloud_mask</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cloud_mask</span><span class="p">)</span> <span class="c1"># this line will take all values greater than 3 and make them 255 (white)</span>
+
+
+<span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> <span class="c1"># Change the pixel width of the image if blurry</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span> <span class="c1"># Change the pixel height of the image if blurry</span>
+    <span class="n">background_color</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="c1"># Change the background color</span>
+    <span class="n">colormap</span> <span class="o">=</span> <span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="c1"># The colors of the words, see https://matplotlib.org/stable/tutorials/colors/colormaps.html</span>
+    <span class="n">max_words</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="c1"># Change the max number of words shown</span>
+    <span class="n">min_font_size</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="c1"># Do not show small text</span>
+    
+    <span class="c1"># Add a shape and outline (known as a mask) to your wordcloud</span>
+    <span class="n">contour_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="c1"># The outline color of your mask shape</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">cloud_mask</span><span class="p">,</span> <span class="c1"># </span>
+    <span class="n">contour_width</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="p">)</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">word_frequency</span><span class="p">)</span>
+
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># Change the image size displayed</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -617,10 +718,14 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
               </div>
               
         
-        <div class='prev-next-bottom'>
             
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
         
         </div>
     </div>

@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -78,7 +78,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -103,41 +103,26 @@
    Course Syllabus
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/all-notebooks.html">
-   All Teaching Notebooks
-  </a>
- </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Create your own Teaching Website
+  Open Educational Directory
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="book/create-your-own.html">
-   Create your own Jupyter Book
+  <a class="reference internal" href="book/all-notebooks.html">
+   Open Notebook Lessons Directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="book/install-software.html">
-   Installing software to modify your Book
+  <a class="reference internal" href="book/add-my-lesson.html">
+   Add your lesson or class
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="book/configure-git.html">
-   Clone your repository to your local machine
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/making-site-changes.html">
-   Make local changes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/pushing-to-git.html">
-   Push changes to the web
+  <a class="reference external" href="https://constellate.org/docs/how-to-create-a-course-website">
+   Create Course from this template
   </a>
  </li>
 </ul>
@@ -153,12 +138,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://docs.constellate.org/">
+  <a class="reference external" href="https://constellate.org/docs">
    Constellate Documentation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://docs.constellate.org/key-terms/">
+  <a class="reference external" href="https://constellate.org/docs/key-terms">
    Text Analysis Glossary
   </a>
  </li>
@@ -276,7 +261,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-your-dataset">
@@ -392,6 +377,11 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
 <span class="c1"># to the /data folder and returns a string for the file name and location</span>
 <span class="c1"># dataset_metadata will be a string containing that file name and location</span>
 <span class="n">dataset_metadata</span> <span class="o">=</span> <span class="n">tdm_client</span><span class="o">.</span><span class="n">get_metadata</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">)</span>
+
+<span class="c1"># To download the full dataset (up to a limit of 25,000 documents),</span>
+<span class="c1"># request it first in the builder environment. See the Constellate Client</span>
+<span class="c1"># documentation at: https://constellate.org/docs/constellate-client</span>
+<span class="c1"># dataset_metadata = tdm_client.download(dataset_id, &#39;metadata&#39;)</span>
 </pre></div>
 </div>
 </div>
@@ -424,6 +414,9 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
 <span class="c1"># Setting None gives us all columns</span>
 <span class="c1"># To show less columns replace None with an integer</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_columns&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> 
+
+<span class="c1"># Set maximumum number of rows to 50</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_rows&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="c1"># Show the first five rows of our dataframe</span>
 <span class="c1"># To show a different number of preview rows</span>
@@ -544,22 +537,38 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We create a function to report how many documents were removed.</span>
+
+<span class="k">def</span> <span class="nf">texts_report</span><span class="p">(</span><span class="n">pre_count</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Prints out a report of:</span>
+<span class="sd">    1. How many documents were removed</span>
+<span class="sd">    2. The total original number of documents</span>
+<span class="sd">    3. The total current number of documents</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">removed_count</span> <span class="o">=</span> <span class="n">pre_count</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">removed_count</span><span class="si">}</span><span class="s1"> texts were removed.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total original documents: </span><span class="si">{</span><span class="n">original_document_count</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total current documents: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="remove-all-rows-without-data-for-a-particular-column">
 <h3>Remove all rows without data for a particular column<a class="headerlink" href="#remove-all-rows-without-data-for-a-particular-column" title="Permalink to this headline">¶</a></h3>
 <p>For example, we may wish to remove any texts that do not have authors. (In the case of journals, this may be helpful for removing paratextual sections such as the table of contents, indices, etc.) The column of interest in this case is <code class="docutils literal notranslate"><span class="pre">creator</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove all texts without an author</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Removing texts without authors...&#39;</span><span class="p">)</span>
+<span class="n">initial_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;creator&#39;</span><span class="p">])</span> <span class="c1">#drop each row that has no value under &#39;creators&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print the total original documents followed by the current number</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total original documents: </span><span class="si">{</span><span class="n">original_document_count</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total current documents: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+
+<span class="c1"># Report the number of texts removed</span>
+<span class="n">texts_report</span><span class="p">(</span><span class="n">initial_count</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -573,9 +582,15 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove all items with a particular title</span>
 <span class="c1"># Change title to desired column</span>
 <span class="c1"># Change `Review Article` to your undesired title</span>
+<span class="n">title_to_remove</span> <span class="o">=</span> <span class="s1">&#39;Review Article&#39;</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">title</span> <span class="o">!=</span> <span class="s1">&#39;Review Article&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total current documents &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="c1"># Removing texts</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Removing texts with title &quot;</span><span class="si">{</span><span class="n">title_to_remove</span><span class="si">}</span><span class="s1">&quot;...&#39;</span><span class="p">)</span>
+<span class="n">initial_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">title</span> <span class="o">!=</span> <span class="n">title_to_remove</span><span class="p">]</span>
+
+<span class="c1"># Report the number of texts removed</span>
+<span class="n">texts_report</span><span class="p">(</span><span class="n">initial_count</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -585,30 +600,33 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Keep only items with a particular language</span>
 <span class="c1"># Change language to desired column</span>
 <span class="c1"># Change &#39;eng&#39; to your desired language</span>
+<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;eng&#39;</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">language</span> <span class="o">==</span> <span class="s1">&#39;eng&#39;</span><span class="p">])</span> <span class="c1"># Change to another language code for other languages</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total current documents &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="c1"># Removing texts</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Removing texts not in &quot;</span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s1">&quot; language...&#39;</span><span class="p">)</span>
+<span class="n">initial_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">language</span> <span class="o">==</span> <span class="n">language</span><span class="p">])</span> <span class="c1"># Change to another language code for other languages</span>
+
+<span class="c1"># Report the number of texts removed</span>
+<span class="n">texts_report</span><span class="p">(</span><span class="n">initial_count</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove all items with less than 3000 words</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove all items with less than 1500 words</span>
 <span class="c1"># Change wordCount to desired column</span>
-<span class="c1"># Change &#39;&gt; 3000&#39; to your desired expression to evaluate</span>
+<span class="c1"># Change `min_word_count to your desired expression to evaluate</span>
+<span class="n">min_word_count</span> <span class="o">=</span> <span class="mi">1500</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">wordCount</span> <span class="o">&gt;</span> <span class="mi">1500</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total current documents &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print the total original documents followed by the current number</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total original documents:&#39;</span><span class="p">,</span> <span class="n">original_document_count</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total current documents: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="c1"># Removing texts</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Removing texts with fewer than </span><span class="si">{</span><span class="n">min_word_count</span><span class="si">}</span><span class="s1"> words...&#39;</span><span class="p">)</span>
+<span class="n">initial_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">wordCount</span> <span class="o">&gt;</span> <span class="n">min_word_count</span><span class="p">]</span>
+
+<span class="c1"># Report the number of texts removed</span>
+<span class="n">texts_report</span><span class="p">(</span><span class="n">initial_count</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -695,10 +713,14 @@ This <a class="reference external" href="https://docs.constellate.org/key-terms/
               </div>
               
         
-        <div class='prev-next-bottom'>
             
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
         
         </div>
     </div>

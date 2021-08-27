@@ -9,12 +9,11 @@ Read more about Constellate below, after the nuts and bolts of cloning these not
 
 You can also clone this repository and run the examples in a local Jupyter Notebook environment. 
 Please keep in mind that this project is in a beta phase and both the notebooks and client code may change frequently. 
-If you have created your own notebooks, or used the client code in some way, we would like to hear about it. Please let us know either here via Github issues or by emailing tdm@ithaka.org.
+If you have created your own notebooks or used the client code in some way, we would like to hear about it. Please let us know either here via Github issues or by emailing tdm@ithaka.org.
 
 To install the client run the following.
 
 * `python -m pip install -r requirements.txt`
-* `python src/tdm_client.py install`
 
 Some of the examples use [nltk](https://www.nltk.org/) model files. Download these with:
 
@@ -42,7 +41,7 @@ Constellate provides value to users in three core areas -- they can teach and le
 * Dataset Dashboard: Easily view datasets you have built or accessed.
 
 ### Analyze
-* Analytics Lab: Integrated computational environment powered by BinderHub that will allow users to seamlessly analyze text content using provided template Jupyter Notebooks and tutorials.
+* Analytics Lab: Integrated computational environment powered by BinderHub that allows users to seamlessly analyze text content using provided template Jupyter Notebooks and tutorials.
 * Visualize: Built-in visualizations for your datasets.
 * Work with Rights Restricted Full Text: We are investigating the best way to meet this need -- please contact us at [tdm@ithaka.org](mailto:tdm@ithaka.org) if you need rights restricted full-text or just want to talk about your research.
 

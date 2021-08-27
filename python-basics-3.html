@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -78,7 +78,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -103,41 +103,26 @@
    Course Syllabus
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/all-notebooks.html">
-   All Teaching Notebooks
-  </a>
- </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Create your own Teaching Website
+  Open Educational Directory
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="book/create-your-own.html">
-   Create your own Jupyter Book
+  <a class="reference internal" href="book/all-notebooks.html">
+   Open Notebook Lessons Directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="book/install-software.html">
-   Installing software to modify your Book
+  <a class="reference internal" href="book/add-my-lesson.html">
+   Add your lesson or class
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="book/configure-git.html">
-   Clone your repository to your local machine
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/making-site-changes.html">
-   Make local changes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="book/pushing-to-git.html">
-   Push changes to the web
+  <a class="reference external" href="https://constellate.org/docs/how-to-create-a-course-website">
+   Create Course from this template
   </a>
  </li>
 </ul>
@@ -153,12 +138,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://docs.constellate.org/">
+  <a class="reference external" href="https://constellate.org/docs">
    Constellate Documentation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://docs.constellate.org/key-terms/">
+  <a class="reference external" href="https://constellate.org/docs/key-terms">
    Text Analysis Glossary
   </a>
  </li>
@@ -276,7 +261,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists">
@@ -462,13 +447,23 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#challenge-level-1">
-       Challenge Level 1
+      <a class="reference internal nav-link" href="#lists-challenge-level-1">
+       Lists Challenge Level 1
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#challenge-level-2">
-       Challenge Level 2
+      <a class="reference internal nav-link" href="#lists-challenge-level-2">
+       Lists Challenge Level 2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dictionaries-challenge-level-1">
+       Dictionaries Challenge Level 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dictionaries-challenge-level-2">
+       Dictionaries Challenge Level 2
       </a>
      </li>
     </ul>
@@ -1014,14 +1009,14 @@ For questions/comments/improvements, email <a class="reference external" href="m
 <hr class="docutils" />
 <hr class="docutils" />
 <h2 style="color:red; display:inline">Coding Challenge! &lt; / &gt; </h2>
-<p><strong>Using your knowledge of flow control statements and lists, can you write a program that transforms a list of strings into a single string of comma-separated values?</strong></p>
+<p>**Using your knowledge of flow control statements and lists, can you write a program that transforms a list of strings into a single string of comma-separated values? Check the end of this notebook for possible solutions.</p>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Level 1 Challenge</span>
 <span class="c1"># A challenge to transform a list of books into a single string of comma-separated values</span>
 <span class="c1"># The result should be the string: &#39;Piers Plowman, The Canterbury Tales, Revelations of Divine Love, The Decameron, Le Morte d&#39;Arthur&#39;</span>
-<span class="n">book_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Piers Plowman&#39;</span><span class="p">,</span> <span class="s1">&#39;The Canterbury Tales&#39;</span><span class="p">,</span> <span class="s1">&#39;Revelations of Divine Love&#39;</span> <span class="s1">&#39;The Decameron&#39;</span><span class="p">,</span> <span class="s2">&quot;Le Morte d&#39;Arthur&quot;</span><span class="p">]</span>
+<span class="n">book_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Piers Plowman&#39;</span><span class="p">,</span> <span class="s1">&#39;The Canterbury Tales&#39;</span><span class="p">,</span> <span class="s1">&#39;Revelations of Divine Love&#39;</span><span class="p">,</span> <span class="s1">&#39;The Decameron&#39;</span><span class="p">,</span> <span class="s2">&quot;Le Morte d&#39;Arthur&quot;</span><span class="p">]</span>
 
 <span class="c1"># Level 2 Challenge</span>
 <span class="c1"># For even more challenge, transform a list of lists containing books and authors into a single string of comma-separated values with an &#39;and&#39; before the final value. Oxford comma please.</span>
@@ -1255,6 +1250,47 @@ For questions/comments/improvements, email <a class="reference external" href="m
 </div>
 </div>
 </div>
+<hr class="docutils" />
+<h2 style="color:red; display:inline">Coding Challenge! &lt; / &gt; </h2>
+<p>**Using your knowledge of flow control statements and dictionaries, can you write a program that lists all the architects in your contacts? Check the end of this notebook for possible solutions.</p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Level 1 Challenge</span>
+<span class="c1"># A challenge to search a contacts dictionary and output any individuals who are architects. The result</span>
+<span class="c1"># should contain the name of any contacts who are architects.</span>
+
+<span class="n">contacts</span> <span class="o">=</span><span class="p">{</span>
+ <span class="s1">&#39;Amanda Bennett&#39;</span><span class="p">:</span> <span class="s1">&#39;Engineer, electrical&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Bryan Miller&#39;</span><span class="p">:</span> <span class="s1">&#39;Radiation protection practitioner&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Christopher Garrison&#39;</span><span class="p">:</span> <span class="s1">&#39;Planning and development surveyor&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Debra Allen&#39;</span><span class="p">:</span> <span class="s1">&#39;Intelligence analyst&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Donna Decker&#39;</span><span class="p">:</span> <span class="s1">&#39;Architect&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Heather Bullock&#39;</span><span class="p">:</span> <span class="s1">&#39;Media planner&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Jason Brown&#39;</span><span class="p">:</span> <span class="s1">&#39;Energy manager&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Jason Soto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lighting technician, broadcasting/film/video&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Marissa Munoz&#39;</span><span class="p">:</span> <span class="s1">&#39;Further education lecturer&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Matthew Mccall&#39;</span><span class="p">:</span> <span class="s1">&#39;Chief Technology Officer&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Michael Norman&#39;</span><span class="p">:</span> <span class="s1">&#39;Translator&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Nicole Leblanc&#39;</span><span class="p">:</span> <span class="s1">&#39;Financial controller&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Noah Delgado&#39;</span><span class="p">:</span> <span class="s1">&#39;Engineer, land&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Rachel Charles&#39;</span><span class="p">:</span> <span class="s1">&#39;Physicist, medical&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Stephanie Petty&#39;</span><span class="p">:</span> <span class="s1">&#39;Architect&#39;</span><span class="p">}</span>
+
+<span class="c1"># Write your solution here. Example solutions at the end of this notebook.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Level 2 Challenge</span>
+<span class="c1"># From the dictionary called contacts, create a Python list called `leads` containing the names of people </span>
+<span class="c1"># who are architects, translators, or media planners.</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <hr class="docutils" />
@@ -1279,8 +1315,8 @@ For questions/comments/improvements, email <a class="reference external" href="m
 <div class="section" id="coding-challenge-solutions">
 <h3>Coding Challenge! Solutions<a class="headerlink" href="#coding-challenge-solutions" title="Permalink to this headline">¶</a></h3>
 <p>There are often many ways to solve programming problems. Here are a few possible ways to solve the challenges, but there are certainly more!</p>
-<div class="section" id="challenge-level-1">
-<h4>Challenge Level 1<a class="headerlink" href="#challenge-level-1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="lists-challenge-level-1">
+<h4>Lists Challenge Level 1<a class="headerlink" href="#lists-challenge-level-1" title="Permalink to this headline">¶</a></h4>
 <p>Transform a list of books into a single string of comma-separated values. Using the list:</p>
 <p><code class="docutils literal notranslate"><span class="pre">book_list</span> <span class="pre">=</span> <span class="pre">['Piers</span> <span class="pre">Plowman',</span> <span class="pre">'The</span> <span class="pre">Canterbury</span> <span class="pre">Tales',</span> <span class="pre">'Revelations</span> <span class="pre">of</span> <span class="pre">Divine</span> <span class="pre">Love',</span> <span class="pre">'The</span> <span class="pre">Decameron',</span> <span class="pre">&quot;Le</span> <span class="pre">Morte</span> <span class="pre">d'Arthur&quot;]</span></code></p>
 <p>Print the string:
@@ -1288,19 +1324,33 @@ For questions/comments/improvements, email <a class="reference external" href="m
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign list to book_list</span>
-<span class="n">book_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Piers Plowman&#39;</span><span class="p">,</span> <span class="s1">&#39;The Canterbury Tales&#39;</span><span class="p">,</span> <span class="s1">&#39;Revelations of Divine Love&#39;</span><span class="p">,</span> <span class="s1">&#39;The Decameron&#39;</span><span class="p">,</span> <span class="s2">&quot;Le Morte d&#39;Arthur&quot;</span><span class="p">]</span>
+<span class="n">book_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Piers Plowman&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;The Canterbury Tales&#39;</span><span class="p">,</span> 
+  <span class="s1">&#39;Revelations of Divine Love&#39;</span><span class="p">,</span> 
+  <span class="s1">&#39;The Decameron&#39;</span><span class="p">,</span> 
+  <span class="s2">&quot;Le Morte d&#39;Arthur&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution 1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution 1a</span>
 <span class="c1"># For loop</span>
 
-<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">book_list</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span> 
+<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">book_list</span><span class="p">:</span> 
     <span class="nb">print</span><span class="p">(</span><span class="n">book</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">book_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution 1b</span>
+<span class="c1"># For loop with f strings</span>
+
+<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">book_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">book</span><span class="si">}</span><span class="s1">, &#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1343,8 +1393,8 @@ For questions/comments/improvements, email <a class="reference external" href="m
 </div>
 </div>
 </div>
-<div class="section" id="challenge-level-2">
-<h4>Challenge Level 2<a class="headerlink" href="#challenge-level-2" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="lists-challenge-level-2">
+<h4>Lists Challenge Level 2<a class="headerlink" href="#lists-challenge-level-2" title="Permalink to this headline">¶</a></h4>
 <p>Transform a list of lists containing books and authors into a single string of comma-separated values with an ‘and’ before the final value. Oxford comma please.</p>
 <p>Using the list:</p>
 <p><code class="docutils literal notranslate"><span class="pre">[['Piers</span> <span class="pre">Plowman',</span> <span class="pre">'William</span> <span class="pre">Langland'],</span> <span class="pre">['The</span> <span class="pre">Canterbury</span> <span class="pre">Tales',</span> <span class="pre">'Geoffrey</span> <span class="pre">Chaucer'],</span> <span class="pre">['Revelations</span> <span class="pre">of</span> <span class="pre">Divine</span> <span class="pre">Love',</span> <span class="pre">'Julian</span> <span class="pre">of</span> <span class="pre">Norwich'],</span> <span class="pre">['The</span> <span class="pre">Decameron',</span> <span class="pre">'Giovanni</span> <span class="pre">Boccaccio'],</span> <span class="pre">[&quot;Le</span> <span class="pre">Morte</span> <span class="pre">d'Arthur&quot;,</span> <span class="pre">'Sir</span> <span class="pre">Thomas</span> <span class="pre">Malory']]</span></code></p>
@@ -1353,18 +1403,33 @@ For questions/comments/improvements, email <a class="reference external" href="m
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign list to books_with_authors</span>
-<span class="n">books_with_authors</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Piers Plowman&#39;</span><span class="p">,</span> <span class="s1">&#39;William Langland&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;The Canterbury Tales&#39;</span><span class="p">,</span> <span class="s1">&#39;Geoffrey Chaucer&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Revelations of Divine Love&#39;</span><span class="p">,</span> <span class="s1">&#39;Julian of Norwich&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;The Decameron&#39;</span><span class="p">,</span> <span class="s1">&#39;Giovanni Boccaccio&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Le Morte d&#39;Arthur&quot;</span><span class="p">,</span> <span class="s1">&#39;Sir Thomas Malory&#39;</span><span class="p">]]</span>
+<span class="n">books_with_authors</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Piers Plowman&#39;</span><span class="p">,</span> <span class="s1">&#39;William Langland&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;The Canterbury Tales&#39;</span><span class="p">,</span> <span class="s1">&#39;Geoffrey Chaucer&#39;</span><span class="p">],</span> 
+  <span class="p">[</span><span class="s1">&#39;Revelations of Divine Love&#39;</span><span class="p">,</span> <span class="s1">&#39;Julian of Norwich&#39;</span><span class="p">],</span> 
+  <span class="p">[</span><span class="s1">&#39;The Decameron&#39;</span><span class="p">,</span> <span class="s1">&#39;Giovanni Boccaccio&#39;</span><span class="p">],</span> 
+  <span class="p">[</span><span class="s2">&quot;Le Morte d&#39;Arthur&quot;</span><span class="p">,</span> <span class="s1">&#39;Sir Thomas Malory&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution 1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution 1a</span>
 <span class="c1"># For loop</span>
 <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">books_with_authors</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; by &#39;</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;and &#39;</span> <span class="o">+</span> <span class="n">books_with_authors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; by &#39;</span> <span class="o">+</span> <span class="n">books_with_authors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Solution 1b</span>
+<span class="c1"># For loop with f strings</span>
+<span class="k">for</span> <span class="n">book_item</span> <span class="ow">in</span> <span class="n">books_with_authors</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">book_item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> by </span><span class="si">{</span><span class="n">book_item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">, &#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;and </span><span class="si">{</span><span class="n">books_with_authors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> by </span><span class="si">{</span><span class="n">books_with_authors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1410,6 +1475,60 @@ For questions/comments/improvements, email <a class="reference external" href="m
 </div>
 </div>
 </div>
+<div class="section" id="dictionaries-challenge-level-1">
+<h4>Dictionaries Challenge Level 1<a class="headerlink" href="#dictionaries-challenge-level-1" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Level 1 Challenge Solution</span>
+<span class="c1"># A challenge to search a contacts dictionary and output any individuals who are architects. The result</span>
+<span class="c1"># should contain the name of any contacts who are architects.</span>
+
+<span class="n">contacts</span> <span class="o">=</span><span class="p">{</span>
+ <span class="s1">&#39;Amanda Bennett&#39;</span><span class="p">:</span> <span class="s1">&#39;Engineer, electrical&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Bryan Miller&#39;</span><span class="p">:</span> <span class="s1">&#39;Radiation protection practitioner&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Christopher Garrison&#39;</span><span class="p">:</span> <span class="s1">&#39;Planning and development surveyor&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Debra Allen&#39;</span><span class="p">:</span> <span class="s1">&#39;Intelligence analyst&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Donna Decker&#39;</span><span class="p">:</span> <span class="s1">&#39;Architect&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Heather Bullock&#39;</span><span class="p">:</span> <span class="s1">&#39;Media planner&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Jason Brown&#39;</span><span class="p">:</span> <span class="s1">&#39;Energy manager&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Jason Soto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lighting technician, broadcasting/film/video&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Marissa Munoz&#39;</span><span class="p">:</span> <span class="s1">&#39;Further education lecturer&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Matthew Mccall&#39;</span><span class="p">:</span> <span class="s1">&#39;Chief Technology Officer&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Michael Norman&#39;</span><span class="p">:</span> <span class="s1">&#39;Translator&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Nicole Leblanc&#39;</span><span class="p">:</span> <span class="s1">&#39;Financial controller&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Noah Delgado&#39;</span><span class="p">:</span> <span class="s1">&#39;Engineer, land&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Rachel Charles&#39;</span><span class="p">:</span> <span class="s1">&#39;Physicist, medical&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Stephanie Petty&#39;</span><span class="p">:</span> <span class="s1">&#39;Architect&#39;</span><span class="p">}</span>
+
+<span class="c1"># Write your solution here. Example solutions at the end of this notebook.</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">occupation</span> <span class="ow">in</span> <span class="n">contacts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">occupation</span> <span class="o">==</span> <span class="s1">&#39;Architect&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries-challenge-level-2">
+<h4>Dictionaries Challenge Level 2<a class="headerlink" href="#dictionaries-challenge-level-2" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Level 2 Challenge</span>
+<span class="c1"># From the dictionary called contacts, create a Python list called `leads` containing the names of people </span>
+<span class="c1"># who are architects, translators, or media planners.</span>
+<span class="n">leads</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">occupation</span> <span class="ow">in</span> <span class="n">contacts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">occupation</span> <span class="o">==</span> <span class="s1">&#39;Architect&#39;</span> <span class="ow">or</span> <span class="n">occupation</span> <span class="o">==</span> <span class="s1">&#39;Translator&#39;</span> <span class="ow">or</span> <span class="n">occupation</span> <span class="o">==</span><span class="s1">&#39;Media planner&#39;</span><span class="p">:</span>
+        <span class="n">leads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">leads</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1437,10 +1556,14 @@ For questions/comments/improvements, email <a class="reference external" href="m
               </div>
               
         
-        <div class='prev-next-bottom'>
             
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
         
         </div>
     </div>
