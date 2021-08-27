@@ -1,9 +1,14 @@
+# Environment requirements
 jupyter_contrib_nbextensions
-requests
-progressbar
+jupyter-offlinenotebook
+constellate-client
+# Notebook requirements
 pandas
 gensim==3.8.3
 nltk
 pyLDAvis==3.2.2
 matplotlib
 vaderSentiment
+numpy
+Pillow
+wordcloud
